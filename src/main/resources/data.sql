@@ -1,0 +1,1 @@
+INSERT INTO AUTHORS (ID, `FIRSTNAME`, `LASTNAME`) VALUES ( 1, 'Lev', 'Tolstoy' );
