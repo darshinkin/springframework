@@ -27,7 +27,7 @@ public class BookRepositoryJpaIntegrationTest {
     @Test
     public void whenFindByName_thenReturnBook() {
         // given
-        Book book = new Book("Fathers and Sons", "978-5-699-74085-7");
+        Book book = new Book(111, "Fathers and Sons", "978-5-699-74085-7");
         entityManager.persist(book);
         entityManager.flush();
 
@@ -42,7 +42,7 @@ public class BookRepositoryJpaIntegrationTest {
     @Test
     public void whenCreate_thenReturnCreatedBook() {
         // given
-        Book book = new Book("Fathers and Sons", "978-5-699-74085-7");
+        Book book = new Book(111, "Fathers and Sons", "978-5-699-74085-7");
         bookRepositoryJpa.createBook(book);
 
         // when
@@ -56,7 +56,7 @@ public class BookRepositoryJpaIntegrationTest {
     @Test(expected = NoResultException.class)
     public void whenDelete_thenDontReturnBook() {
         // given
-        Book book = new Book("Fathers and Sons", "978-5-699-74085-7");
+        Book book = new Book(111, "Fathers and Sons", "978-5-699-74085-7");
         bookRepositoryJpa.createBook(book);
 
         // when
